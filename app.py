@@ -16,10 +16,6 @@ try:
     SILICONFLOW_API_KEY = st.secrets["SILICONFLOW_API_KEY"]
     PARSING_API_URL = st.secrets["PARSING_API_URL"]
 
-    # 🔍 调试打印：如果这一行能显示在网页上，说明 Secrets 读取成功
-    st.warning(f"正在使用的解析接口: [{PARSING_API_URL}]")
-    st.info(f"Key长度检查: {len(SILICONFLOW_API_KEY)} 位")
-
 except Exception as e:
     st.error(f"❌ 启动失败: {e}")
     st.error("请检查 .streamlit/secrets.toml (本地) 或 Streamlit Cloud Secrets (云端)。")
